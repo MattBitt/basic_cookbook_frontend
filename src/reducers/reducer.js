@@ -14,6 +14,17 @@ export default function(todos=init, action) {
                     return t;
                 }
             });
+        case 'DELETE_TODO':
+        {console.log(todos)}
+            return todos.map(t => {
+                if(t.get('id') === action.payload) {
+                    return {}
+                } else {
+                    return t;
+                }
+            });
+        
+        
         default:
             return todos;
     }

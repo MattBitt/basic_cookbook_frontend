@@ -1,11 +1,14 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { createStore } from 'redux';
+
 import { Provider } from 'react-redux';
 import { TodoList } from './containers/containers';
-import reducer from './reducers/reducer';
+import configureStore from './stores/store';
 
-const store = createStore(reducer);
+const store = configureStore();
+
+
+
 // const dummyTodos = List([
   // Map({ id: 0, isDone: true,  text: 'make components' }),
   // Map({ id: 1, isDone: false, text: 'design actions' }),
