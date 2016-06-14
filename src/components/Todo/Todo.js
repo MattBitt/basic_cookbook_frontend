@@ -26,7 +26,12 @@ export function TodoList(props) {
   
   const toggleClick = id => event => toggleTodo(id);
   
-  const onDelete = id => event => deleteTodo(id);
+  const onDelete = (id, e) => {
+      console.log(id);
+      console.log(e);
+      // e.stopPropagation();
+      
+  }
   
   return (
     <div className='todo'>
